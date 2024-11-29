@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/registerCL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditReminderActivity">
+
+    <ImageView
+        android:id="@+id/editReminderBackIV"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/editReminderTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Ubah Pengingat"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/editReminderBackIV"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/editReminderTimeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:text="Time"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editReminderBackIV" />
+
+    <EditText
+        android:id="@+id/editReminderTimeET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Time"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editReminderTimeTV" />
+
+    <TextView
+        android:id="@+id/editReminderTextTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Reminder"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editReminderTimeET" />
+
+    <EditText
+        android:id="@+id/editReminderTextET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edittext_background"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editReminderTextTV" />
+
+    <Button
+        android:id="@+id/editReminderSaveBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#90CAF9"
+        android:text="Simpan Perubahan"
+        android:textSize="16sp"
+        app:cornerRadius ="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editReminderTextET" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
