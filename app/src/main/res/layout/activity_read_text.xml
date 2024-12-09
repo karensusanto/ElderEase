@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadTextActivity">
+
+    <Button
+        android:id="@+id/readTextCaptureBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#1596FF"
+        android:text="Buka Kamera"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@id/readTextOpenGalleryBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/readTextResTV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="bottom|center_horizontal"
+        android:hint="Teks dari gambar akan ditampilkan di sini"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/readTextPlayIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readTextTitleTV" />
+
+    <ImageView
+        android:id="@+id/readTextBackIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:foregroundGravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_24" />
+
+    <ImageView
+        android:id="@+id/readTextPlayIV"
+        android:layout_width="64dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/readTextCaptureBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_play_circle_24" />
+
+    <TextView
+        android:id="@+id/readTextTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Hasil Deteksi Teks"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/readTextBackIV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/readTextOpenGalleryBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Ambil Dari Perangkat"
+        android:textColor="#1596FF"
+        android:textSize="16sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
