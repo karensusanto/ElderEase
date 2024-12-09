@@ -2,9 +2,107 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/dailyWordCL"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddContactActivity">
+
+    <ImageView
+        android:id="@+id/ecallBackIV"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/round_arrow_back_24" />
+
+    <TextView
+        android:id="@+id/ecallTitleTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Tambah Nomor Baru"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/ecallBackIV"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/addContactNameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/outline_person_24"
+        android:drawablePadding="10dp"
+        android:hint="Sumiyarti"
+        android:inputType="text"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="20dp"
+        android:textColor="#000"
+        android:textColorHint="#808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addContactNameTV" />
+
+    <TextView
+        android:id="@+id/addContactNameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="120dp"
+        android:text="Nama Kontak"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ecallTitleTV" />
+
+    <TextView
+        android:id="@+id/addContactPhoneNumTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:text="Nomor Telepon"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addContactNameET" />
+
+    <EditText
+        android:id="@+id/addContactPhoneNumET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/edittext_background"
+        android:drawableStart="@drawable/outline_local_phone_24"
+        android:drawablePadding="10dp"
+        android:hint="+62xxxxxxxxxxx"
+        android:inputType="phone"
+        android:paddingVertical="12dp"
+        android:paddingHorizontal="20dp"
+        android:textColor="#000"
+        android:textColorHint="#808080"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addContactPhoneNumTV" />
+
+    <Button
+        android:id="@+id/addContactBtn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#90CAF9"
+        android:text="Tambahkan Kontak"
+        android:textSize="20sp"
+        app:cornerRadius = "10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addContactPhoneNumET" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

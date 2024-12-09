@@ -3,13 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
 
     <Button
         android:id="@+id/editListItemNameBtn"
         android:layout_width="0dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
+        android:paddingVertical="10dp"
         android:text="Button"
         android:textSize="27sp"
         app:cornerRadius="10dp"
@@ -23,11 +25,11 @@
     <ImageButton
         android:id="@+id/editListItemDelBtn"
         android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="3dp"
+        android:layout_height="0dp"
         android:background="@drawable/rounded_button_background"
         android:backgroundTint="#E06C73"
         android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_delete_outline_24" />

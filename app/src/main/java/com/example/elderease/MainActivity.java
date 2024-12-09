@@ -1,27 +1,48 @@
 package com.example.elderease;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
+import android.provider.MediaStore;
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ListAdapter;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-
     List<String> dailyWordList;
     List<Menu> menuList;
     GridView dailyWordGV, menuGV;
+    MenuGVAdapter menuAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +54,6 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-//        Intent getData = getIntent();
-//        String username = getData.getStringExtra("username");
-//        if(username.isEmpty()){
-//            Intent toRegister = new Intent(MainActivity.this, RegisterActivity.class);
-//            startActivity(toRegister);
-//            finish();
-//        }
-
         dailyWordGV = findViewById(R.id.mainDailyWordGV);
         initializeDailyWord();
         DailyWordGVAdapter activityAdapter = new DailyWordGVAdapter(MainActivity.this, dailyWordList);
@@ -48,9 +61,9 @@ public class MainActivity extends AppCompatActivity {
         setGridViewHeightBasedOnChildren(dailyWordGV, (DailyWordGVAdapter) dailyWordGV.getAdapter());
 
 
-        menuGV = findViewById(R.id.mainMenuGrid);
         initializeMenu();
-        MenuGVAdapter menuAdapter = new MenuGVAdapter(MainActivity.this, menuList);
+        menuGV = findViewById(R.id.mainMenuGrid);
+        menuAdapter = new MenuGVAdapter(MainActivity.this, menuList);
         menuGV.setAdapter(menuAdapter);
         setGridViewHeightBasedOnChildren(menuGV, (MenuGVAdapter) menuGV.getAdapter());
 
@@ -77,7 +90,6 @@ public class MainActivity extends AppCompatActivity {
         menuList.add(new Menu(R.drawable.scanner, "Baca Tulisan"));
         menuList.add(new Menu(R.drawable.phone, "Telepon Darurat"));
         menuList.add(new Menu(R.drawable.notifications, "Notifikasi"));
-        menuList.add(new Menu(R.drawable.settings, "Pengaturan"));
     }
 
     public void setGridViewHeightBasedOnChildren(GridView gridView, ListAdapter adapter) {
@@ -99,5 +111,4 @@ public class MainActivity extends AppCompatActivity {
         params.height = totalHeight;
         gridView.setLayoutParams(params);
     }
-
 }

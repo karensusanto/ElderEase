@@ -2,6 +2,7 @@ package com.example.elderease;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +16,12 @@ import java.util.List;
 public class DailyWordRVAdapter extends RecyclerView.Adapter<DailyWordRVAdapter.DailyWordHolder> {
     Context context;
     List<String> dailyWordList;
-    String[] colors = {"#A4F3CE", "#E9A3A7", "#EFC1A0", "#ACDBEF"};
+    int[][] colors = {
+            {0xFFA4F3CE, 0xFF6CE0A9},
+            {0xFFE9A3A7, 0xFFE06C73},
+            {0xFFEFC1A0, 0xFFF8AD79},
+            {0xFFACDBEF, 0xFF76CDF2}
+    };
     public DailyWordRVAdapter(List<String> inputDailyWordList){
         dailyWordList = inputDailyWordList;
     }
@@ -40,7 +46,13 @@ public class DailyWordRVAdapter extends RecyclerView.Adapter<DailyWordRVAdapter.
     public void onBindViewHolder(@NonNull DailyWordRVAdapter.DailyWordHolder holder, int position) {
         String word = dailyWordList.get(position);
         holder.wordBtn.setText(word);
-        holder.wordBtn.setBackgroundColor(Color.parseColor(colors[position%4]));
+        GradientDrawable gradient = new GradientDrawable(
+                GradientDrawable.Orientation.TOP_BOTTOM, // Gradient direction
+                new int[]{colors[position%4][0], colors[position%4][1]}      // Start and end colors
+        );
+        gradient.setCornerRadius(16f); // Rounded corners
+        holder.wordBtn.setBackgroundTintList(null);
+        holder.wordBtn.setBackground(gradient);
     }
 
     @Override

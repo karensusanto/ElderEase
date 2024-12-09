@@ -8,37 +8,170 @@
     android:background="@drawable/background_gradient"
     tools:context=".RegisterActivity">
 
-    <Button
-        android:id="@+id/registerBackgroundBtn"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/registerCardLL"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="-20dp"
-        android:backgroundTint="#FFFFFF"
-        app:cornerRadius="40dp"
+        android:background="@drawable/rounded_top_corner"
+        android:foregroundGravity="center"
+        android:gravity="start"
+        android:orientation="vertical"
+        android:paddingVertical="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/registerNameET"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/edittext_border_background"
-        android:drawableStart="@drawable/outline_person_24"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Nama Pengguna"
-        android:inputType="text"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/registerBackgroundBtn"
-        app:layout_constraintTop_toBottomOf="@+id/registerNameTV" />
+        <TextView
+            android:id="@+id/registerNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="Nama Pengguna"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/registerNameET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edittext_border_background"
+            android:drawableStart="@drawable/outline_person_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Nama Pengguna"
+            android:inputType="text"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp" />
+
+        <TextView
+            android:id="@+id/registerPassTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Kata Sandi"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/registerPassET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edittext_background"
+            android:drawableStart="@drawable/baseline_lock_outline_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Kata Sandi"
+            android:inputType="text|textPassword"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp" />
+
+        <TextView
+            android:id="@+id/registerConfirmPassTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Konfirmasi Kata Sandi"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/registerConfirmPassET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edittext_background"
+            android:drawableStart="@drawable/baseline_lock_outline_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Kata Sandi"
+            android:inputType="text|textPassword"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp" />
+
+        <TextView
+            android:id="@+id/registerPhoneNumTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Nomor Telepon"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/registerPhoneNumET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/edittext_background"
+            android:drawableStart="@drawable/outline_local_phone_24"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="+62xxxxxxxx"
+            android:inputType="text"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp" />
+
+        <Button
+            android:id="@+id/registerNextBtn"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:backgroundTint="#90CAF9"
+            android:text="Lanjutkan"
+            android:textSize="20sp"
+            app:cornerRadius="10dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/registerToLoginCL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/registerToLoginLL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:foregroundGravity="center_vertical|center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/registerToLoginTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="#AFB1B6"
+                    android:text="Sudah memiliki akun?" />
+
+                <TextView
+                    android:id="@+id/registerToLogin2TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" Masuk"
+                    android:textColor="#90CAF9"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/registerTitleTV"
@@ -51,124 +184,6 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/registerNameTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="160dp"
-        android:text="Nama Pengguna"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/registerBackgroundBtn"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/registerPassTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="Kata Sandi"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerNameET" />
-
-    <TextView
-        android:id="@+id/registerConfirmPassTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="Konfirmasi Kata Sandi"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPassET" />
-
-    <TextView
-        android:id="@+id/registerPhoneNumTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="Nomor Telepon"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerConfirmPassET" />
-
-    <EditText
-        android:id="@+id/registerPassET"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/edittext_background"
-        android:drawableStart="@drawable/outline_person_24"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Kata Sandi"
-        android:inputType="text|textPassword"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPassTV" />
-
-    <EditText
-        android:id="@+id/registerConfirmPassET"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/edittext_background"
-        android:drawableStart="@drawable/outline_person_24"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Kata Sandi"
-        android:inputType="text|textPassword"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/registerBackgroundBtn"
-        app:layout_constraintTop_toBottomOf="@+id/registerConfirmPassTV" />
-
-    <EditText
-        android:id="@+id/registerPhoneNumET"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/edittext_background"
-        android:drawableStart="@drawable/outline_person_24"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="+62xxxxxxxx"
-        android:inputType="text"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPhoneNumTV" />
-
-    <Button
-        android:id="@+id/registerNextBtn"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
-        android:backgroundTint="#90CAF9"
-        android:text="Lanjutkan"
-        android:textSize="20sp"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPhoneNumET" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -189,33 +204,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ellipse_4" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="16dp"
-        android:foregroundGravity="center_vertical|center_horizontal"
-        android:gravity="center_horizontal|center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerNextBtn">
-
-        <TextView
-            android:id="@+id/registerToLoginTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Sudah memiliki akun?" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Masuk"
-            android:textStyle="bold" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

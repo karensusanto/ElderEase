@@ -58,7 +58,9 @@
                 android:gravity="start|center_vertical"
                 android:text="Kata Lainnya"
                 android:textSize="20sp"
-                app:cornerRadius="10dp" />
+                app:cornerRadius="10dp"
+                app:icon="@drawable/outline_edit_square_24"
+                app:iconSize="27dp" />
 
             <TextView
                 android:id="@+id/mainMenuTV"

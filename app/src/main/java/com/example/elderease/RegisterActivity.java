@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,17 +30,26 @@ public class RegisterActivity extends AppCompatActivity {
         EditText registerConfirmPassET = findViewById(R.id.registerConfirmPassET);
         EditText registerPhoneNumET = findViewById(R.id.registerPhoneNumET);
         Button registerNextBtn = findViewById(R.id.registerNextBtn);
+        TextView registerToLogin2TV = findViewById(R.id.registerToLogin2TV);
 
         String username=registerNameET.getText().toString();
         String pass = registerPassET.getText().toString();
         String confirmPass = registerConfirmPassET.getText().toString();
         String phoneNum = registerPhoneNumET.getText().toString();
 
+        Intent toLogin = new Intent(RegisterActivity.this, LoginActivity.class);
+        Intent toOTP = new Intent(RegisterActivity.this, OTPActivity.class);
         registerNextBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent toHome = new Intent(RegisterActivity.this, MainActivity.class);
-                toHome.putExtra("username", username);
+                startActivity(toOTP);
+            }
+        });
+
+        registerToLogin2TV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(toLogin);
             }
         });
 

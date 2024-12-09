@@ -7,34 +7,3 @@
         android:angle="135"
         android:type="linear" />
 </shape>
-
-<!--<?xml version="1.0" encoding="utf-8"?>-->
-<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
-
-<!--    &lt;!&ndash; First gradient (background layer) &ndash;&gt;-->
-<!--    <item>-->
-<!--        <shape>-->
-<!--            <gradient-->
-<!--                android:startColor="#FF5733"-->
-<!--                android:endColor="#FFC300"-->
-<!--                android:type="radial"-->
-<!--                android:gradientRadius="20%p"-->
-<!--                android:centerX="0.5"-->
-<!--                android:centerY="0.5" />-->
-<!--        </shape>-->
-<!--    </item>-->
-
-<!--    &lt;!&ndash; Second gradient (overlay layer) &ndash;&gt;-->
-<!--    <item>-->
-<!--        <shape>-->
-<!--            <gradient-->
-<!--                android:startColor="#33FF57"-->
-<!--                android:endColor="#33C3FF"-->
-<!--                android:type="radial"-->
-<!--                android:gradientRadius="20%p"-->
-<!--                android:centerX="0.5"-->
-<!--                android:centerY="0.5" />-->
-<!--        </shape>-->
-<!--    </item>-->
-
-<!--</layer-list>-->
